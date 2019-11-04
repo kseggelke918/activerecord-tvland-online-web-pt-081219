@@ -4,7 +4,7 @@ class Character < ActiveRecord::Base
   
   def say_that_thing_you_say 
     binding.pry 
-    puts "#{character.name} always says: #{character.catchphrase}"
+    puts "#{self.name} always says: #{self.catchphrase}"
   end 
   
 end
