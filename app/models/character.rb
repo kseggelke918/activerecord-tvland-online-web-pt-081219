@@ -1,6 +1,6 @@
 class Character < ActiveRecord::Base
-  has_many :characters 
-  has_many :actors, through: :characters 
+  belongs_to :actor 
+  belongs_to :show 
   
   def say_that_thing_you_say 
     puts "#{character.name} always says: #{character.catchphrase}"
